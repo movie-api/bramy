@@ -13,24 +13,19 @@ const getMovies = require('./getMovies.js');
 getMovies().then((movies) => {
   console.log('Here are all the movies:');
       $("#main").empty();
+      let table = "<table><tr><th>ID</th><th>Title</th><th>Rating</th></tr>";
   movies.forEach(({id, title, rating}) => {
-      $("#main").append(`
-        <table>
-          <tr>
-              <th>ID</th>
-              <th>Title</th>
-              <th>Rating</th>
-          </tr>
+          table += `
           <tr>
             <td>${id}</td>
             <td>${title}</td>
             <td>${rating}</td>
-          </tr>
-        </table>
-    `);
+          </tr>`;
     console.log(`id#${id} - ${title} - rating: ${rating}`);
-  });
-}).catch((error) => {
+    });
+        table += `</table>`;
+    $("#main").append(table);
+  }).catch((error) => {
   alert('Oh no! Something went wrong.\nCheck the console for details.');
   console.log(error);
 });
