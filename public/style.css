@@ -9,10 +9,22 @@ html, body {
     text-align: center;
 }
 
-.glyphicon{
-    top: -5px;
+.glyphicon-plus{
+    top: -4px;
+}
+
+#pageTitle {
+    margin-bottom: 40px;
 }
 
 #chart-title {
     display: inline;
+}
+
+#movieTable {
+    margin: 10px auto;
+}
+
+th, td {
+    padding: 10px;
 }
