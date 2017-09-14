@@ -15,7 +15,9 @@ const modalEvents = require('./modal.js');
 getMovies().then((movies) => {
   console.log('Here are all the movies:');
       $("#main").empty();
-      let table = "<h2 id='title'>Movies </h2><span class='glyphicon glyphicon-plus' id='show-add-form' data-target='#add-movie-form' data-toggle='modal'></span><table><tr><th>ID</th><th>Title</th><th>Rating</th></tr>";
+      let table = "<h2 id='chart-title'>Movies </h2><span class='glyphicon glyphicon-plus' id='show-add-form' data-target='#add-movie-form' data-toggle='modal'></span>" +
+
+      "<table><tr><th class='text-center'>ID</th><th class='text-center'>Title</th><th class='text-center'>Rating</th></tr>";
 
       movies.forEach(({id, title, rating}) => {
           table += `

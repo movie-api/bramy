@@ -2,7 +2,7 @@ const $ = require("jquery");
 
 function saveAddForm () {
     $('#save-add').click(function () {
-        let title = $("#title").val();
+        let title = $("#movie-title").val();
         let rating = $("#rating").val();
         let movie = {
             title: title,
