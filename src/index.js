@@ -8,13 +8,15 @@ sayHello('World');
 /**
  * require style imports
  */
-
 const getMovies = require('./getMovies.js');
+const modalForms = require('./modal.js');
+
 getMovies().then((movies) => {
   console.log('Here are all the movies:');
       $("#main").empty();
-      let table = "<table><tr><th>ID</th><th>Title</th><th>Rating</th></tr>";
-  movies.forEach(({id, title, rating}) => {
+      let table = "<h2 id='title'>Movies </h2><span class='glyphicon glyphicon-plus'></span><table><tr><th>ID</th><th>Title</th><th>Rating</th></tr>";
+
+      movies.forEach(({id, title, rating}) => {
           table += `
           <tr>
             <td>${id}</td>

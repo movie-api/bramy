@@ -8,3 +8,11 @@ html, body {
     transform: translateY(-100%);
     text-align: center;
 }
+
+.glyphicon{
+    top: -5px;
+}
+
+#title {
+    display: inline;
+}
