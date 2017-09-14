@@ -29,9 +29,9 @@ getMovies().then((movies) => {
         table += `</table>`;
     $("#main").append(table);
 
-    modalEvents.modalForms();
+    modalEvents.saveAddForm();
 
-  }).catch((error) => {
+}).catch((error) => {
   alert('Oh no! Something went wrong.\nCheck the console for details.');
   console.log(error);
 });

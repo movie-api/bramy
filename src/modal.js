@@ -1,17 +1,27 @@
 const $ = require("jquery");
 
-function modalForms () {
-    $('#show-add-form').click(function () {
-        console.log("Plus");
-        showModal("add-movie-form");
+function saveAddForm () {
+    $('#save-add').click(function () {
+        let title = $("#title").val();
+        let rating = $("#rating").val();
+        let movie = {
+            title: title,
+            rating: rating
+        };
+        console.log(movie);
+        fetch("/api/movies", {
+            headers: {"content-type": "application/json"},
+            method: "POST",
+            body: JSON.stringify({title, rating})
+        });
+        // addMovie();
     });
 }
 
-function showModal(modalName) {
-    let modal = $("#" + modalName);
-    modal.show();
-}
+// function addMovie () {
 
-module.exports = {modalForms, showModal};
+// }
+
+module.exports = {saveAddForm};
 
 
