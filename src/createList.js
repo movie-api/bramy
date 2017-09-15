@@ -9,10 +9,10 @@ let createList = (movies) => {
     movies.forEach(({id, title, rating}) => {
         table += `
           <tr>
-            <td>${id}</td>
-            <td>${title}</td>
-            <td>${rating}</td>
-            <td><span class="glyphicon glyphicon-edit"></span><span class="glyphicon glyphicon-minus" data-id="${id}" data-target="#delete-movie" data-toggle="modal"></span></td>
+            <td class="id">${id}</td>
+            <td class="title">${title}</td>
+            <td class="rating">${rating}</td>
+            <td><span class="glyphicon glyphicon-edit" data-id="${id}" data-target="#edit-movie" data-toggle="modal"></span><span class="glyphicon glyphicon-minus" data-id="${id}" data-target="#delete-movie" data-toggle="modal"></span></td>
           </tr>`;
         console.log(`id#${id} - ${title} - rating: ${rating}`);
     });
