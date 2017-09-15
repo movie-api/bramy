@@ -3,6 +3,7 @@
  */
 
 import sayHello from './hello';
+
 sayHello('World');
 
 /**
@@ -11,20 +12,22 @@ sayHello('World');
 
 const getMovies = require('./getMovies.js');
 const createList = require('./createList.js');
+let id = 0;
 
 getMovies().then((movies) => {
-  console.log('Here are all the movies:');
+    console.log('Here are all the movies:');
     createList(movies);
+    setListener();
     saveAddForm();
-    deleteMovie($("#confirmDelete"));
+    // deleteMovie($("#confirmDelete"));
 
 }).catch((error) => {
-  alert('Oh no! Something went wrong.\nCheck the console for details.');
-  console.log(error);
+    alert('Oh no! Something went wrong.\nCheck the console for details.');
+    console.log(error);
 });
 
 
-function saveAddForm () {
+function saveAddForm() {
     $('#save-add').click(function () {
 
         let title = $("#movie-title").val();
@@ -33,41 +36,44 @@ function saveAddForm () {
             title: title,
             rating: rating
         };
+        $('#movie-title').val("");
         console.log(movie);
         fetch("/api/movies", {
             headers: {"content-type": "application/json"},
             method: "POST",
             body: JSON.stringify({title, rating})
-        }).then(()=>{
+        }).then(() => {
             getMovies().then((movies) => {
-                createList(movies)
+                createList(movies);
+                setListener();
+                // deleteMovie($("#confirmDelete"));
             });
         });
         $("#add-movie-form").modal("toggle");
     });
 }
 
-function deleteMovie (deleteConfirm) {
-    $('#movieTable').delegate(".glyphicon-minus","click", (e) =>{
-        let deleteBtn = $("#confirmDelete");
-        let movieId = $(e.target).attr('data-id');
-        console.log(movieId);
-        deleteBtn.attr('data-id', movieId);
-    });
-    deleteConfirm.click(function () {
-        $("#confirmDelete").removeAttr("data-id");
-        console.log($(this));
-        let id = $(this).attr("data-id");
-        console.log(id);
-        fetch(`/api/movies/${id}`, {
-            headers: {"content-type": "application/json"},
-            method: "DELETE"
-        }).then(()=>{
-            getMovies().then((movies) => {
-                createList(movies)
-            });
+$("#confirmDelete").on("click", function () {
+    // $("#confirmDelete").off("click");
+    console.log(id);
+    fetch(`/api/movies/${id}`, {
+        headers: {"content-type": "application/json"},
+        method: "DELETE"
+    }).then(() => {
+        getMovies().then((movies) => {
+            createList(movies);
+            setListener();
+            // deleteMovie($("#confirmDelete"));
         });
-        $("#delete-movie").modal("toggle");
+    });
+    $("#delete-movie").modal("toggle");
+
+});
+
+function setListener() {
+    $("#movieTable").delegate('.glyphicon-minus', "click", function (e) {
+        // $('.glyphicon-minus').off("click");
+        id = $(this).attr('data-id');
 
     });
 }

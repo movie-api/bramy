@@ -12,12 +12,14 @@ let createList = (movies) => {
             <td>${id}</td>
             <td>${title}</td>
             <td>${rating}</td>
-            <td><span class="glyphicon glyphicon-edit"></span><span class="glyphicon glyphicon-minus" data-id=${id} data-target="#delete-movie" data-toggle="modal"></span></td>
+            <td><span class="glyphicon glyphicon-edit"></span><span class="glyphicon glyphicon-minus" data-id="${id}" data-target="#delete-movie" data-toggle="modal"></span></td>
           </tr>`;
         console.log(`id#${id} - ${title} - rating: ${rating}`);
     });
     table += `</table>`;
     $("#main").append(table);
+
 };
+
 
 module.exports = createList;
