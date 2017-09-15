@@ -1,13 +1,35 @@
 html, body {
     height: 100%;
+    background-image: url("./img/gplaypattern_@2X.png");
 }
 
 .container {
     text-align: center;
 }
 
+#trademark {
+    font-size: .75em;
+}
+
+.glyphicon {
+    font-weight: bold;
+}
+
+.glyphicon:hover {
+    cursor: pointer;
+}
+
 .glyphicon-plus{
     top: -4px;
+    color: #80ff00;
+}
+
+.glyphicon-edit {
+    color: #00ffff;
+}
+
+.glyphicon-minus {
+    color: red;
 }
 
 #pageTitle {
@@ -20,6 +42,12 @@ html, body {
 
 #movieTable {
     margin: 10px auto;
+    width: 80%;
+    border: 1px solid #D3D3D3;
+}
+
+th {
+    text-decoration: underline;
 }
 
 th, td {

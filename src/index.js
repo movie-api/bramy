@@ -12,7 +12,12 @@ sayHello('World');
 
 const getMovies = require('./getMovies.js');
 const createList = require('./createList.js');
+const $ = require("jquery");
+
 let id = 0;
+
+// Progress bar
+$(".progress-bar").css('width', '100%');
 
 getMovies().then((movies) => {
     console.log('Here are all the movies:');
@@ -44,7 +49,6 @@ $('#save-add').click(function () {
 });
 
 $("#confirmDelete").on("click", function () {
-    ;
     console.log(id);
     fetch(`/api/movies/${id}`, {
         headers: {"content-type": "application/json"},
@@ -88,3 +92,7 @@ $("#main").delegate('.glyphicon-edit', "click", function (e) {
     $("#edited-movie-title").val(title);
     $("#edited-rating").val(rating);
 });
+
+
+
+
