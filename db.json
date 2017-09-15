@@ -1,24 +1,6 @@
 {
   "movies": [
     {
-      "title": "Wonder Woman",
-      "rating": "2",
-      "id": 1,
-      "genre": "Action"
-    },
-    {
-      "title": "Pootie Tang",
-      "rating": "5",
-      "id": 2,
-      "genre": "Comedy"
-    },
-    {
-      "title": "Tim Duncan: The True Story",
-      "rating": "5",
-      "id": 3,
-      "genre": "Action"
-    },
-    {
       "title": "Bridesmaids",
       "rating": "5",
       "id": 4,
@@ -29,12 +11,6 @@
       "rating": "4",
       "id": 5,
       "genre": "Adventure"
-    },
-    {
-      "title": "Chapelle Show",
-      "rating": "5",
-      "id": 6,
-      "genre": "Comedy"
     },
     {
       "title": "Willy Wonka",
@@ -82,7 +58,7 @@
       "title": "Shakira",
       "rating": "5",
       "id": 14,
-      "genre": "Musical"
+      "genre": "Romance"
     },
     {
       "title": "Harry Potter 2",
@@ -119,6 +95,12 @@
       "rating": "5",
       "id": 20,
       "genre": "Comedy"
+    },
+    {
+      "title": "Wonder Woman",
+      "rating": "2",
+      "genre": "Action",
+      "id": 22
     }
   ]
 }

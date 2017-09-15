@@ -22,11 +22,11 @@ html, body {
 
 .glyphicon-plus{
     top: -4px;
-    color: #80ff00;
+    color: #229c1e;
 }
 
 .glyphicon-edit {
-    color: #00ffff;
+    color: #334fff;
 }
 
 .glyphicon-minus {
@@ -48,12 +48,14 @@ html, body {
 #movieTable {
     margin: 10px auto;
     width: 80%;
+    mid-width:50%;
     border: 1px solid #D3D3D3;
 }
 
 th {
     text-decoration: underline;
     font-size: 2em;
+    font-family: 'IM Fell DW Pica SC', serif;
 }
 td {
     font-size: 1.5em;
