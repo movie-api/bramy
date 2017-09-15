@@ -3,27 +3,122 @@
     {
       "title": "Wonder Woman",
       "rating": "2",
-      "id": 1
+      "id": 1,
+      "genre": "Action"
     },
     {
       "title": "Pootie Tang",
       "rating": "5",
-      "id": 2
+      "id": 2,
+      "genre": "Comedy"
     },
     {
       "title": "Tim Duncan: The True Story",
       "rating": "5",
-      "id": 3
+      "id": 3,
+      "genre": "Action"
     },
     {
       "title": "Bridesmaids",
       "rating": "5",
-      "id": 6
+      "id": 4,
+      "genre": "Comedy"
     },
     {
       "title": "Harry Potter and the Sorcerer's Stone",
       "rating": "4",
-      "id": 7
+      "id": 5,
+      "genre": "Adventure"
+    },
+    {
+      "title": "Chapelle Show",
+      "rating": "5",
+      "id": 6,
+      "genre": "Comedy"
+    },
+    {
+      "title": "Willy Wonka",
+      "rating": "4",
+      "id": 7,
+      "genre": "Adventure"
+    },
+    {
+      "title": "T-Payne - Coding Like a Motha!",
+      "rating": "5",
+      "id": 8,
+      "genre": "Romance"
+    },
+    {
+      "title": "50 Shades Gray",
+      "rating": "5",
+      "id": 9,
+      "genre": "Romance"
+    },
+    {
+      "title": "Rocky",
+      "rating": "4",
+      "id": 10,
+      "genre": "Action"
+    },
+    {
+      "title": "Ali",
+      "rating": "5",
+      "id": 11,
+      "genre": "Action"
+    },
+    {
+      "title": "The Notebook",
+      "rating": "1",
+      "id": 12,
+      "genre": "Romance"
+    },
+    {
+      "title": "Random Movie",
+      "rating": "2",
+      "id": 13,
+      "genre": "Drama"
+    },
+    {
+      "title": "Shakira",
+      "rating": "5",
+      "id": 14,
+      "genre": "Musical"
+    },
+    {
+      "title": "Harry Potter 2",
+      "rating": "4",
+      "id": 15,
+      "genre": "Adventure"
+    },
+    {
+      "title": "Harry Potter 3",
+      "rating": "4",
+      "id": 16,
+      "genre": "Adventure"
+    },
+    {
+      "title": "Harry Potter 4",
+      "rating": "4",
+      "id": 17,
+      "genre": "Adventure"
+    },
+    {
+      "title": "Harry Potter 5",
+      "rating": "4",
+      "id": 18,
+      "genre": "Adventure"
+    },
+    {
+      "title": "Hunger Games",
+      "rating": "4",
+      "id": 19,
+      "genre": "Adventure"
+    },
+    {
+      "title": "Rush Hour",
+      "rating": "5",
+      "id": 20,
+      "genre": "Comedy"
     }
   ]
 }

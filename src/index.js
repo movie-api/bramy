@@ -93,6 +93,17 @@ $("#main").delegate('.glyphicon-edit', "click", function (e) {
     $("#edited-rating").val(rating);
 });
 
-
+// function testAnim(x) {
+//     $('.modal').attr('class' + x + '  animated');
+// };
+//
+// $('.myModal').on('show.bs.modal', function (e) {
+//     var anim = $('#entrance').val();
+//     testAnim(anim);
+// })
+// $('.myModal').on('hide.bs.modal', function (e) {
+//     var anim = $('#exit').val();
+//     testAnim(anim);
+// });
 
 
