@@ -103,4 +103,12 @@ $("#main").delegate('.glyphicon-edit', "click", function (e) {
     console.log($("#edit-movie-genre").val(genre));
 });
 
-
+function testAnim(x) {
+    $('.modal .modal-dialog').attr('class', 'modal-dialog  ' + x + '  animated');
+};
+$('.modal').on('show.bs.modal', function (e) {
+    testAnim("zoomIn");
+})
+$('.modal').on('hide.bs.modal', function (e) {
+    testAnim("zoomOut");
+})

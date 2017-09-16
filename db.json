@@ -4,7 +4,7 @@
       "title": "Bridesmaids",
       "rating": "5",
       "id": 4,
-      "genre": "Comedy"
+      "genre": "Adventure"
     },
     {
       "title": "Harry Potter and the Sorcerer's Stone",
@@ -41,12 +41,6 @@
       "rating": "5",
       "id": 11,
       "genre": "Action"
-    },
-    {
-      "title": "The Notebook",
-      "rating": "1",
-      "id": 12,
-      "genre": "Romance"
     },
     {
       "title": "Random Movie",
@@ -101,6 +95,18 @@
       "rating": "2",
       "genre": "Action",
       "id": 22
+    },
+    {
+      "title": "Daniel Be Queit",
+      "rating": "1",
+      "genre": "Drama",
+      "id": 23
+    },
+    {
+      "title": "Star Wars: A New Hope",
+      "rating": "5",
+      "genre": "Adventure",
+      "id": 24
     }
   ]
 }
