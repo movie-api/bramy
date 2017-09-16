@@ -43,12 +43,6 @@
       "genre": "Action"
     },
     {
-      "title": "Random Movie",
-      "rating": "2",
-      "id": 13,
-      "genre": "Drama"
-    },
-    {
       "title": "Shakira",
       "rating": "5",
       "id": 14,
@@ -97,16 +91,16 @@
       "id": 22
     },
     {
-      "title": "Daniel Be Queit",
-      "rating": "1",
-      "genre": "Drama",
-      "id": 23
-    },
-    {
       "title": "Star Wars: A New Hope",
       "rating": "5",
       "genre": "Adventure",
       "id": 24
+    },
+    {
+      "title": "Fire Walk With Me",
+      "rating": "4",
+      "genre": "Drama",
+      "id": 25
     }
   ]
 }

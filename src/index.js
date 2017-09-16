@@ -1,3 +1,4 @@
+
 /**
  * es6 modules and imports
  */
@@ -18,16 +19,19 @@ let id = 0;
 // Progress bar
 $(".progress-bar").css('width', '100%');
 
-getMovies().then((movies) => {
-    console.log('Here are all the movies:');
-    movies.sort(function (a, b) {
-        return a.rating - b.rating;
-    }).reverse();
-    createList(movies);
-}).catch((error) => {
-    alert('Oh no! Something went wrong.\nCheck the console for details.');
-    console.log(error);
-});
+function retrieveMovies () {
+    getMovies().then((movies) => {
+        console.log('Here are all the movies:');
+        movies.sort(function (a, b) {
+            return a.rating - b.rating;
+        }).reverse();
+        createList(movies, moviesPerPage, currentPage);
+    }).catch((error) => {
+        alert('Oh no! Something went wrong.\nCheck the console for details.');
+        console.log(error);
+    });
+}
+retrieveMovies();
 
 $('#save-add').click(function () {
     let title = $("#movie-title").val();
@@ -112,3 +116,14 @@ $('.modal').on('show.bs.modal', function (e) {
 $('.modal').on('hide.bs.modal', function (e) {
     testAnim("zoomOut");
 })
+
+var moviesPerPage = 8;
+var currentPage = 1;
+function goToPage (pageNumber) {
+    currentPage = pageNumber;
+    retrieveMovies();
+}
+
+$(".pagination-page").click(function(){
+    goToPage($(this).text());
+});
